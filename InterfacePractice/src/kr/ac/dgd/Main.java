@@ -13,9 +13,17 @@ public class Main {
 
     public static void main(String[] args) {
         // interface 구현 문제
-        List<PizzaBaker> pizzaBakers = new ArrayList<>();
+        List<Student> students = new ArrayList<Student>();
+        students.add(new ElementaryStudent("elemStudent1", "A"));
+        students.add(new ElementaryStudent("elemStudent1", "B"));
+        students.add(new ElementaryStudent("elemStudent1", "C"));
+        students.add(new HighSchoolStudent("HighStudent1", 99));
+        students.add(new HighSchoolStudent("HighStudent2", 88));
+        students.add(new HighSchoolStudent("HighStudent3", 77));
+        students.add(new HighSchoolStudent("HighStudent4", 66));
 
-        pizzaBakers.add(new JjhPizza("jjh특제빵", "jjh재료들"));
-
+        for (Student s : students){
+            s.printStudentInfo();
+        }
     }
 }
